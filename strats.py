@@ -1,8 +1,5 @@
-from dataclasses import dataclass
-
-
 class TradingStrat:
-    def __init__(self, candles, type):
+    def __init__(self, candles, signals):
 
         self.candles = candles
-        self.type = type
+        self.signals = signals
