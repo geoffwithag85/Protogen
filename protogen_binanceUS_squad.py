@@ -1,4 +1,4 @@
-# Paper trading version of Protogen Alorithmic Trading Bot
+#Protogen Alorithmic Trading Bot
 
 import ccxt
 import config
