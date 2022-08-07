@@ -65,9 +65,9 @@ def indicators(df):
 in_position = False
 position = ''
 balance_usd = 1000 #starting balance USD
-balance_pos = .03 #starting position balance
+balance_pos = .044 #starting position balance
 fees = 0
-fee = 0.00075
+fee = 0.00
 stoploss = 0
 size = 0
 usd_size = 0
@@ -120,9 +120,9 @@ def check_buy_sell_signals(df):
     previous_row_index = last_row_index - 1
     
     risk_reward_ratio = 4
-    RSI_range_lower = 30
+    RSI_range_lower =30
     RSI_range_upper = 70
-    atr_multiple = 4
+    atr_multiple = 2
     band_wiggle = 0.05
 
     #candle patterns
