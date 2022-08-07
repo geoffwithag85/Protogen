@@ -1,0 +1,3 @@
+import TradingStrat
+
+BBRSI = TradingStrat()
