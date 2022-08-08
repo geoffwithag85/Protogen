@@ -1,9 +1,15 @@
+import pandas as pd
+
 class TradingStrat:
     def __init__(self, candles):
         self.candles = candles
-        self.buy = False
-        self.sell = False
+        self.ratio = 2
+        
+        
 
-    def buysellsignals(self):
-
-        return [self.buy, self.sell]
+    def __indicators(self):
+        pass
+    
+    
+    def __signals(self):
+        pass

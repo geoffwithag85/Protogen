@@ -1,7 +1,7 @@
 import ccxt
 import pandas as pd
 
-class ApeSquad:
+class Belter:
     def __init__(self, APIkey, APIsecret):
         self.apikey = APIkey
         self.apisecret = APIsecret
@@ -10,6 +10,8 @@ class ApeSquad:
             "secret": self.apisecret
         })
         self.switch = True
+
+        self.autobalance()
     
 
     def orders(self):

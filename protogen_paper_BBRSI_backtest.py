@@ -119,10 +119,10 @@ def check_buy_sell_signals(df):
     last_row_index = df.index[-1]
     previous_row_index = last_row_index - 1
     
-    risk_reward_ratio = 4
+    risk_reward_ratio = 5
     RSI_range_lower =30
     RSI_range_upper = 70
-    atr_multiple = 2
+    atr_multiple = 5
     band_wiggle = 0.05
 
     #candle patterns
@@ -336,11 +336,14 @@ def check_buy_sell_signals(df):
 def run_bot():
     global orders
     try:
-        print(f"Fetching new bars for {datetime.now().isoformat()}")
-        bars = exchange.fetch_ohlcv('BTC/USD', timeframe='5m', limit=2000)
+        # print(f"Fetching new bars for {datetime.now().isoformat()}")
+        # bars = exchange.fetch_ohlcv('BTC/USD', timeframe='5m', limit=2000)
+        bars = pd.read_csv('backtesting\data\BTC_5m\BTCUSDT-5m-2022-07.csv')
+        # dfinit = pd.DataFrame(bars[:-1], columns=['timestamp', 'open', 'high', 'low', 'close', 'volume'])
+        dfinit = bars.iloc[:,0:6] 
+        dfinit.columns = ['timestamp', 'open', 'high', 'low', 'close', 'volume']
         
-        dfinit = pd.DataFrame(bars[:-1], columns=['timestamp', 'open', 'high', 'low', 'close', 'volume'])
-        
+
         dfinit['timestamp'] = pd.to_datetime(dfinit['timestamp'], unit='ms')
         # print(dfinit)
         dfsize = 35
