@@ -37,8 +37,8 @@ leber_exchange = ccxt.binanceus({
 
 
 brown_switch = True
-bucher_switch = True
-leber_switch = True
+bucher_switch = False
+leber_switch = False
 
 
 def indicators(df):
@@ -250,10 +250,10 @@ def check_buy_sell_signals(df):
     last_row_index = df.index[-1]
     previous_row_index = last_row_index - 1
     
-    risk_reward_ratio = 5
+    risk_reward_ratio = 4
     RSI_range_lower = 40
     RSI_range_upper = 60
-    atr_multiple = 5
+    atr_multiple = 2
     band_wiggle = 0.05
 
     #candle patterns

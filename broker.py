@@ -1,7 +1,7 @@
 import ccxt
 import pandas as pd
 
-class Belter:
+class Broker:
     def __init__(self, APIkey, APIsecret):
         self.apikey = APIkey
         self.apisecret = APIsecret
